@@ -47,15 +47,15 @@ class VehicleController extends Controller
      */
     public function store(Request $request)
     {
-        //  $this->validate(request(),[
-        //     'customer_name'=>'required',
-        //     'mobile_number'=>'required',
-        //     'address'=>'required',
-        //     'vehicle_id'=>'required',
-        //     'vehicle_model'=>'required',
-        //     'vehicle_number'=>'required',
+         $this->validate(request(),[
+            'customer_name'=>'required',
+            'mobile_number'=>'required',
+            'address'=>'required',
+            'vehicle_id'=>'required',
+            'vehicle_model'=>'required',
+            'vehicle_number'=>'required',
            
-        // ]);
+        ]);
 
          // return request()->all();
          try {
@@ -110,15 +110,15 @@ class VehicleController extends Controller
      */
     public function update(Request $request, $id)
     {
-       // $this->validate(request(),[
-       //      'customer_name'=>'required',
-       //      'mobile_number'=>'required',
-       //      'address'=>'required',
-       //      'engine_id'=>'required',
-       //      'vehicle_model'=>'required',
-       //      'vehicle_number'=>'required',
+       $this->validate(request(),[
+            'customer_name'=>'required',
+            'mobile_number'=>'required',
+            'address'=>'required',
+            'engine_id'=>'required',
+            'vehicle_model'=>'required',
+            'vehicle_number'=>'required',
            
-       //  ]);
+        ]);
 
          try {
             $Vehicle_update =Vehicle::findorfail($id);
