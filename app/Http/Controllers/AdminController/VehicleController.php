@@ -18,6 +18,7 @@ class VehicleController extends Controller
     public function index() {
       if(request()->ajax()){
             $Vehicle =  Vehicle::get();
+$Vehicle1 =  Vehicle::first();
             return DataTables::of($Vehicle)
               ->addColumn('action',
                     '<a href="{{ action(\'AdminController\VehicleController@edit\',[$id]) }}" class="btn btn-info text-right py-10 align-middle btn-group btn-group-sm" ><i class="fas fa-eye"></i></a>
